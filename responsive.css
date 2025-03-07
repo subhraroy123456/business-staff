@@ -13,10 +13,10 @@
 }
 @media (max-width: 1440px) {
   .client-swiper-btns .swiper-button-prev {
-    left: -3rem;
+    left: -5rem;
   }
   .client-swiper-btns .swiper-button-next {
-    right: -3rem;
+    right: -5rem;
   }
   .client-swiper-btns .swiper-client-btn {
     min-width: 46px;

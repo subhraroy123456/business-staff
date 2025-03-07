@@ -594,11 +594,115 @@ header.fixed .nav-right a.btnn {
   width: 100%;
   height: 2px;
   background: #e1efff;
-  flex: 1.8;
+  flex: 1.3;
 }
 
 /* JOB OPPORTUNITY */
 .job-opportunity {
   background: #f8f8f8;
   padding: 200px 0;
+}
+
+.job-opportunity-content {
+  max-width: 360px;
+  min-height: 100%;
+  min-height: 216px;
+  background: #ffffff;
+
+  border-radius: 10px;
+
+  box-shadow: 0px 2px 40px rgba(33, 127, 243, 0.06);
+  padding: 30px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.job-opportunity-content .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+.job-opportunity-content .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.job-opportunity-content .info,
+.job-opportunity-content .icon {
+  position: relative;
+  z-index: 2;
+}
+.job-opportunity-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0d0d0d;
+  opacity: 0.8;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+.job-opportunity-content .info h5 {
+  font-family: Outfit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 36px;
+  text-align: left;
+
+  color: #1b2a41;
+  margin-bottom: 0;
+  margin: 20px 0 17px;
+  transition: all 0.3s ease-in-out;
+}
+.job-opportunity-content .info .info-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.job-opportunity-content .info .info-flex p {
+  font-family: Outfit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: left;
+  color: #1b74ba;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 5px;
+  transition: all 0.3s ease-in-out;
+}
+.custom-container {
+  max-width: 1140px !important;
+}
+.job-opportunity-content:hover {
+  background: transparent;
+}
+.job-opportunity-content:hover .img {
+  opacity: 1;
+  pointer-events: all;
+}
+.job-opportunity-content:hover h5,
+.job-opportunity-content:hover .info-flex p {
+  color: #fff;
+}
+.job-opportunity-content:hover .icon svg path {
+  fill: #fff;
+}
+.job-opportunity-content .icon svg path {
+  transition: all 0.3s ease-in-out;
+}
+.job-opportunity-content:hover::before {
+  opacity: 0.8;
+  pointer-events: all;
 }
